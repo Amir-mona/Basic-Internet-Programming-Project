@@ -1,0 +1,64 @@
+* {
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+}
+
+.homecontainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+.containerHeader {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 3rem;
+  background-color: rgb(0, 49, 0);
+}
+
+.headerText {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.headerLogo {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.containerSection {
+  background-image: url("https://cdn.unenvironment.org/nowpap/s3fs-public/2021-02/3%20EO%20IGM%20banner.jpg?null");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.containerSectionTitle {
+  font-size: 3em;
+  padding-top: 10rem;
+  padding-bottom: 1rem;
+}
+.containerSelectionTitle {
+  padding-bottom: 1rem;
+}
+.containerFooter {
+  background-color: rgb(0, 49, 0);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(236, 193, 141);
+}
+
+.FooterCollageLink {
+  color: rgb(236, 193, 141);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Css/Login.css" />
+    <title>Login page</title>
+  </head>
+  <body class="containerLogin">
+    <div class="FormLoginContainer">
+      <div style="font-size: 3rem; color: blue; padding-bottom: 1rem">
+        Login
+      </div>
+      <p style="font-size: 1.2rem; color: blue; padding-bottom: 1rem">
+        Please enter your details:
+      </p>
+
+      <div>
+        <form
+          action="/action_page.php"
+          onsubmit="return validateForm()"
+          name="loginform"
+        >
+          <label for="Email">Email:</label>
+          <input
+            class="loginFormText"
+            type="text"
+            id="Email"
+            name="Email"
+            placeholder="Enter Email"
+            required
+          /><br /><br />
+
+          <label for="Password">Password:</label>
+          <input
+            class="loginFormText"
+            type="text"
+            id="Password"
+            name="Password"
+            placeholder="Enter Password"
+            required
+          /><br /><br />
+
+          <input
+            class="loginFormSubmitbutton"
+            name="LoginSubmit"
+            type="submit"
+            value="Login"
+          /><br /><br />
+        </form>
+      </div>
+
+      <a href="./Home.html" title="you can restart your Email Password here"
+        >Forgot Password</a
+      >
+    </div>
+  </body>
+</html>

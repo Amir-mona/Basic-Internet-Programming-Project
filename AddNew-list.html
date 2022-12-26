@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Css/addNew-list.css" />
+    <title>AddNewList page</title>
+  </head>
+  <body class="AddingListContainer">
+    <div class="addingListBorderContainer">
+      <h1 style="font-size: 5rem; color: blue">New List</h1>
+      <p style="font-size: 2rem; color: blue; padding-bottom: 1rem">
+        Please Add a New List
+      </p>
+      <form name="addingNewList-form">
+        <label for="ListName">List Name:</label>
+        <input
+          class="addingListForm"
+          type="text"
+          id="ListName"
+          name="ListName"
+          placeholder="Enter your List Name"
+        /><br /><br />
+
+        <input
+          class="NewListBtn"
+          type="submit"
+          id="NewListBtn"
+          name="NewListBtn"
+          value="Add List"
+          onclick="submitForm()"
+        /><br /><br />
+      </form>
+    </div>
+    <script>
+      function submitForm() {
+        document.addingNewList - form.submit();
+        document.addingNewList - form.reset();
+      }
+    </script>
+  </body>
+</html>

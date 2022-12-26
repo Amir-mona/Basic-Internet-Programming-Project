@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Css/Registration.css" />
+    <title>Registration page</title>
+  </head>
+  <body class="containerRegistration">
+    <div class="FormRegistrationContainer">
+      <div style="font-size: 3rem; color: blue; padding-bottom: 1rem">
+        Register
+      </div>
+      <p style="font-size: 1.2rem; color: blue; padding-bottom: 1rem">
+        Please enter your details:
+      </p>
+
+      <div>
+        <form
+          action="/action_page.php"
+          onsubmit="return validateForm()"
+          name="RegistrationForm"
+        >
+          <label for="Email">Email:</label>
+          <input
+            class="loginFormText"
+            type="text"
+            id="Email"
+            name="Email"
+            placeholder="Enter Email"
+            required
+          /><br /><br />
+
+          <label for="Password">Password:</label>
+          <input
+            class="loginFormText"
+            type="text"
+            id="Password"
+            name="Password"
+            placeholder="Enter Password"
+            required
+          /><br /><br />
+
+          <label for="Firstname">First name</label>
+          <input
+            class="loginFormText"
+            type="text"
+            id="Firstname"
+            name="Firstname"
+            placeholder="Enter Firstname"
+          /><br /><br />
+
+          <label for="Email">Last name:</label>
+          <input
+            class="loginFormText"
+            type="text"
+            id="Lastname"
+            name="Lastname"
+            placeholder="Enter Lastname"
+          /><br /><br />
+
+          <label for="Email">Age:</label>
+          <input
+            class="loginFormText"
+            type="date"
+            id="Age"
+            name="Age"
+          /><br /><br />
+
+          <label for="Email">General:</label>
+          <input type="radio" name="gender" value="female" checked /> Male
+          <input type="radio" name="gender" value="female" /> Female
+          <br /><br />
+
+          <input type="checkbox" name="checkbox" id="myCheck" required /> I
+          agree to the rules and regulations <br /><br />
+          <p id="demo"></p>
+          <input
+            class="registrationFormSubmitbutton"
+            name="LoginSubmit"
+            type="submit"
+            value="Register"
+          /><br /><br />
+        </form>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        let date = new Date();
+        let dd = date.getDate();
+        let mm = date.getMonth() + 1;
+        let yyyy = date.getFullYear();
+
+        //Add a zero if one Digit (eg: 05,09)
+        if (dd < 10) {
+          dd = "0" + dd;
+        }
+
+        //Add a zero if one Digit (eg: 05,09)
+        if (mm < 10) {
+          mm = "0" + mm;
+        }
+
+        minYear = yyyy - 120; //Calculate Minimun Age (<120)
+        maxYear = yyyy - 10; //Calculate Maximum Age (>10)
+
+        let min = minYear + "-" + mm + "-" + dd;
+        let max = maxYear + "-" + mm + "-" + dd;
+
+        document.getElementById("Age").setAttribute("min", min);
+        document.getElementById("Age").setAttribute("max", max);
+      };
+      function checkbox() {
+        let x = document.getElementById("myCheck").required;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </body>
+</html>

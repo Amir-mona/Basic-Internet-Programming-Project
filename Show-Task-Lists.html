@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Css/Show-Task-Lists.css" />
+    <title>Show Task Lists page</title>
+  </head>
+  <body class="showTaskListContainer">
+    <div class="showTaskListBorderContainer">
+      <h1 style="font-size: 5rem; color: blue">Show task List</h1>
+      <p style="font-size: 2rem; color: blue; padding-bottom: 1rem">
+        Please Select any Task From Table List
+      </p>
+      <table style="width: 100%">
+        <tr>
+          <th>Name</th>
+          <th>Descript</th>
+          <th>Level</th>
+          <th>Date</th>
+          <th>finsh quest</th>
+        </tr>
+        <tr id="showColor1">
+          <th>Mia</th>
+          <th>smart girl</th>
+          <th>8/10</th>
+          <th>20/3/2000</th>
+          <th><input type="checkbox" id="checked1" onclick="doneTasks()" /></th>
+        </tr>
+        <tr id="showColor2">
+          <th>Emily</th>
+          <th>love to swim</th>
+          <th>5/10</th>
+          <th>10/4/2001</th>
+          <th><input type="checkbox" id="checked2" onclick="doneTasks()" /></th>
+        </tr>
+        <tr id="showColor3">
+          <th>Fiona</th>
+          <th>Like movies</th>
+          <th>9/10</th>
+          <th>15/6/1998</th>
+          <th><input type="checkbox" id="checked3" onclick="doneTasks()" /></th>
+        </tr>
+        <tr id="showColor4">
+          <th>Joy</th>
+          <th>gammer</th>
+          <th>10/10</th>
+          <th>17/8/1994</th>
+          <th><input type="checkbox" id="checked4" onclick="doneTasks()" /></th>
+        </tr>
+      </table>
+      <input
+        class="doneTaskBtn"
+        type="submit"
+        id="doneTaskBtn"
+        name="doneTaskBtn"
+        value="Done Tasks"
+      />
+    </div>
+    <script>
+      function doneTasks() {
+        let checkBox1 = document.getElementById("checked1");
+        let checkBox2 = document.getElementById("checked2");
+        let checkBox3 = document.getElementById("checked3");
+        let checkBox4 = document.getElementById("checked4");
+        let showColor1 = document.getElementById("showColor1");
+        let showColor2 = document.getElementById("showColor2");
+        let showColor3 = document.getElementById("showColor3");
+        let showColor4 = document.getElementById("showColor4");
+
+        if (checkBox1.checked == true) {
+          showColor1.style.backgroundColor = "green";
+        } else {
+          showColor1.style.backgroundColor = "antiquewhite";
+        }
+        if (checkBox2.checked == true) {
+          showColor2.style.backgroundColor = "green";
+        } else {
+          showColor2.style.backgroundColor = "antiquewhite";
+        }
+        if (checkBox3.checked == true) {
+          showColor3.style.backgroundColor = "green";
+        } else {
+          showColor3.style.backgroundColor = "antiquewhite";
+        }
+        if (checkBox4.checked == true) {
+          showColor4.style.backgroundColor = "green";
+        } else {
+          showColor4.style.backgroundColor = "antiquewhite";
+        }
+      }
+    </script>
+  </body>
+</html>
